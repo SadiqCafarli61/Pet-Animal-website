@@ -1,0 +1,928 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    overflow-x: hidden !important;
+}
+body{
+    opacity: 1;
+    transition: 0.7s ;
+    transition-property: opacity;
+}
+.bar{
+    width: 10px;
+    height: 40px;
+    background-color: #ffa500;
+    margin: 0 5px;
+}
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: bar 1s infinite;
+}
+@keyframes bar{
+    0%{
+        transform: scaleY(0.2);
+    }
+    50%{
+        transform: scaleY(1);
+    }
+    100%{
+        transform: scaleY(0.2);
+    }
+}
+.hereket1{
+    animation-delay: 0.1s;
+}
+.hereket2{
+    animation-delay: 0.2s;
+}
+.hereket3{
+    animation-delay: 0.3s;
+}
+.hereket4{
+    animation-delay: 0.4s;
+}
+.hereket5{
+    animation-delay: 0.5s;
+} 
+body .load{
+    opacity: 0;
+}
+.window{
+    background-color: #fff;
+    color: #222;
+}
+.overlay{
+    height: 100vh;
+    background-color: rgb(22,19,69);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: width  0.4s ease;
+    overflow-x: hidden;
+    width: 0;
+    position: fixed;
+}
+.open{
+    width: 350px;
+    padding-left: 40px;
+}
+.overlay button{
+    width: 120px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 25px;
+    color: rgb(22,19,69);
+    border: none;
+    outline: none;
+    transition: 0.4s ease;
+    cursor: pointer;
+    margin-top: 60px;
+    margin-left: 20px;
+}
+.overlay button:hover{
+    background-color: rgb(22,19,69);
+    color: #fff;
+    border: 2px solid #fff;
+}
+.overlay .overlay-menu .dropdown-content{
+    position: absolute;
+    top: 160px;
+    background-color: #e5e5e5;
+    z-index: 4;
+    min-width: 200px;
+    display: none;
+}
+.aktiv{
+   display: block;
+}
+.overlay .overlay-menu .dropdown-content ul a{
+    color: rgb(22,19,69);
+    font-size: 22px;
+}
+.overlay .overlay-menu {
+display: flex;
+padding: 70px 0;
+flex-direction: column;
+height: 100vh;
+}
+.overlay .overlay-menu a{
+    font-size: 52px;
+    color: #fff;
+    font-weight: 700;
+    transition: all 0.4s ease;
+    min-width: 300px;
+}
+.overlay .overlay-menu a:hover{
+    text-decoration: underline !important;
+    text-decoration-color: #fff;
+}
+.overlay .overlay-menu .active {
+    color: orange;
+    transition: 0.4s ease;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 60px;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    overflow:hidden;
+    padding-bottom: 50px;
+}
+.header .logo{
+    width: 100px;
+    height: 100px;
+    padding-top: 40px;
+}
+.header .logo img{
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.header .logo img:hover{
+    width: 105px;
+}
+.header .button{
+height: 40px;
+width: 120px;
+background: transparent;
+border-radius: 25px;
+border: 2px solid rgb(22,59,69);
+outline: none;
+cursor: pointer;
+transition: all 0.4s ease;
+color: rgb(22,59,69);
+}
+.header .button:hover{
+    background-color: rgb(22,19,69);
+    color: #fff;
+}
+.home-section{
+   padding-top: 80px ;
+}
+.home-section .home .left-side{
+    background-color: rgb(22,19,69);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.home-section .home .left-side h2{
+    font-size: 72px;
+    color: #fff;
+    font-weight: 600;
+    overflow: hidden;
+}
+.home-section .home .left-side .buttons{
+    margin-top: 120px;
+}
+.home-section .home .left-side button{
+    width: 230px;
+    height: 55px;
+    background-color: #ffa500;
+    color: rgb(22,19,69);
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.home-section .home .rigtht-side img{
+    object-fit: cover;
+    cursor: pointer;
+    width: 100%;
+}
+.logos-section{
+    padding-top: 30px;
+    background-color: rgb(215, 236, 255);
+}
+.discover-section{
+    padding-left: 50px;
+}
+.discover-section .discover .left-side{
+    padding-top: 30px;
+}
+.discover-section .discover .left-side h2{
+    font-size: 54px;
+    color: #222;
+    padding-bottom: 45px;
+}
+.discover-section .discover .left-side img{
+    padding-bottom: 45px;
+}
+.discover-section .discover .left-side p{
+    font-size: 24px;
+    color: #333;
+    padding-bottom: 40px;
+    font-weight: 600;
+}
+.discover-section .discover .left-side button{
+    width: 200px;
+    height: 57px;
+    border-radius: 25px;
+    background-color: transparent;
+    font-size: 22px;
+    border: 1px solid rgb(22,19,69);
+    color: rgb(22,59,69);
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.discover-section .discover .left-side button:hover{
+    transform: scale(1.1);
+}
+.discover-section .discover .right-side img{
+    width: 100%;
+    cursor: pointer;
+    height: auto;
+}
+.shop-section{
+    padding-top: 60px;
+    padding-left: 60px;
+    text-align: center;
+   margin-bottom: 60px;
+}
+.shop-section .shops {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.shop-section .shops h2{
+    font-size: 105px;
+    color: rgb(22,19,69);
+    font-weight: 600;
+}
+.shop-section .shops span{
+    width: 170px;
+    height: 48px;
+    border: 1px solid rgb(22,19,69);
+    border-radius: 22px;
+    cursor: pointer;
+    font-size: 22px;
+    background-color: transparent;
+    transition: 0.4s ease;
+    color: rgb(22,19,69);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.shop-section .shops span:hover{
+    transform: scale(1.1);
+}
+.shop-section .shops h2{
+    overflow: hidden;
+}
+.shop-section .shop{
+    padding-left: 180px;
+    overflow: hidden;
+}
+.shop-section .shop .info h5{
+    color: rgb(22,59,69);
+    font-size: 28px;
+    font-weight: 500;
+}
+.shop-section .shop .info small{
+    color: #ffa500;
+    font-weight: 700;
+    font-size: 28px;
+}
+.shop-section .shop{
+    padding-top: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shop-section .shop .words p{
+    color: #555;
+    font-size: 16px;
+    font-weight: 500;
+}
+.shop-section .shop .words button{
+    width: 180px;
+    height: 57px;
+    border-radius: 24px;
+    color: #fff;
+    background-color: rgb(22,19,69);
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    outline: none;
+}
+.shop-section .shop .words button:hover{
+    transform: scale(1.1);
+}
+.shop-section .shop .image{
+    width: 200px;
+    margin-top: 80px;
+}
+
+.shop-section .shop .image img{
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.shop-section .shop .image img:hover{
+    transform: scale(1.1);
+}
+.virtual-section{
+    background-color: rgb(255, 127, 0);
+    padding: 80px 80px;
+}
+.virtual-section .virtual-content .virtual{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   max-width: 1340px;
+    border-radius: 10px;
+    margin: 0 auto;
+    height: 600px;
+    border: 4px solid rgb(22,19,69);
+}
+.virtual-section .virtual-content .virtual .center h2{
+    font-size: 77px;
+    color: rgb(22,19,69);
+    min-width: 500px;
+}
+.virtual-section .virtual-content .left-side img{
+    position: absolute;
+    left: 14%;
+   object-fit: cover;
+}
+.virtual-section .virtual-content .center p{
+    font-size: 24px;
+    min-width: 550px;
+    color: rgb(22,19,69);
+}
+.virtual-section .virtual-content .virtual .right-side img{
+    position: absolute;
+    right: 16%;
+}
+.virtual-section .virtual-content .center button{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 55px;
+    background-color: rgb(22,19,69);
+    cursor: pointer;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 20px;
+}
+.bundles-section{
+    padding-top: 80px;
+    text-align: center;
+}
+.bundles-section .bundles{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.bundles-section .bundles h2{
+    font-size: 108px;
+    color: rgb(22,19,69);
+    font-weight: 600;
+    overflow: hidden;
+}
+.bundles-section .bundles button{
+    width: 200px;
+    height: 55px;
+    border-radius: 22px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(22,19,69);
+    border: 1px solid rgb(22,19,69);
+}
+.bundles-section .bundles button:hover{
+    transform: scale(1.1);
+}
+.bundles-section .medical-shops-section{
+    padding-top: 50px;
+    padding-left: 45px;
+    padding-right: 70px;
+    padding-bottom: 40px;
+}
+
+.bundles-section .medical-shops-section .medical .image img{
+    width: 100%;
+}
+.bundles-section .medical-shops-section .medical .info{
+    padding-top: 30px;
+}
+.bundles-section .medical-shops-section .medical .info h5{
+    font-size: 42px;
+    color: rgb(22,19,69);
+    font-weight: 500;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.bundles-section .medical-shops-section .medical .info h5:hover{
+    color: #ffa500;
+}
+.bundles-section .medical-shops-section .medical .info p{
+    font-size: 34px;
+    color: #ffa500;
+    font-weight: 700;
+}
+.bundles-section .medical-shops-section .medical .info small{
+    color: #666;
+    font-size: 24px;
+    font-weight: 500;
+}
+.fin-way-section{
+    padding-top: 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(96, 196, 191);
+}
+.fin-way-section h2{
+    font-size: 92px;
+    overflow: hidden;
+    color: rgb(22,19,69);
+    font-weight: 600;
+    position: absolute;
+}
+.fin-way-section .image{
+    margin-top: 75px;
+}
+.fin-way-section .image img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.fin-way-section .fresh-section{
+    padding-top: 60px;
+}
+.fin-way-section .fresh-section  h5{
+    overflow: hidden;
+    font-size: 92px;
+    color: rgb(22,19,69);
+    font-weight: 600;
+    min-width: 500px;
+}
+.fin-way-section .fresh-section p{
+    font-size: 24px;
+    padding-top: 35px;
+    color: rgb(22,19,69);
+}
+.loved-section{
+    padding-top: 70px;
+   background-color: rgb(22, 19, 69);
+   display: flex;
+   flex-direction: column;
+   color: #fff;
+   align-items: center;
+}
+.loved-section h2{
+    font-size: 92px;
+    font-weight: 700;
+    overflow: hidden;
+    padding-bottom: 45px;
+}
+.loved-section .girls-section {
+    padding-top: 45px;
+    background-color: rgb(22, 19, 69)
+}
+.loved-section .girls-section .girl{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.loved-section .girls-section .girl .right-side .icons{
+    margin-top: 55px;
+}
+.loved-section .girls-section .girl .right-side p{
+    font-size: 27px;
+    min-width: 280px;
+}
+.loved-section .girls-section .girl .left-side .image{
+    width: 400px;
+}
+.loved-section .girls-section .girl .left-side .image img{
+    width: 100%;
+    object-fit: cover;
+}
+.loved-section .girls-section .girl .right-side .icons{
+    overflow: hidden;
+}
+.loved-section .girls-section .girl .right-side .icons img{
+    width: 75px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    padding: 10px;
+}
+.loved-section .girls-section .girl .right-side .icons img:hover{
+    transform: scale(1.1);
+}
+.loved-section .girls-section .girl .right-side .icons span{
+    padding-left: 20px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    padding-top: 55px;
+}
+.loved-section .girls-section .girl .right-side .icons span:hover{
+    color: #ffa500;
+    transform: scale(1.1);
+}
+.worth-barking-section{
+    padding-top: 55px;
+}
+.worth-barking-section h2{
+    text-align: center;
+    font-size: 92px;
+    color: rgb(22, 19, 69);
+    font-weight: 600;
+    position: absolute;
+    overflow: hidden;
+    left: 20%;
+}
+
+.worth-barking-section .worth{
+    padding-top: 45px;
+}
+.worth-barking-section .worth .right-side{
+    padding-top: 90px;
+}
+.worth-barking-section .worth  .left-side .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-attachment: fixed;
+}
+.worth-barking-section .worth .right-side .words i{
+    color: #ffa500;
+}
+.worth-barking-section .worth .right-side .words{
+    margin: 20px;
+}
+.worth-barking-section .worth .right-side .words span{
+    color: #777;
+    font-size: 14px;
+    padding-left: 10px;
+}
+.worth-barking-section .worth .right-side .words .right-side-center{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.worth-barking-section .worth .right-side .words .right-side-center p{
+    font-size: 20px;
+    color: rgb(22, 19, 69);
+    font-weight: 600;
+}
+.footer-section{
+    background-color: rgb(22, 19, 69);
+    padding-top: 65px;
+    padding-left: 200px;
+}
+.footer-section .footer .services {
+    display: flex;
+    flex-direction: column;
+}
+.footer-section .footer .services a{
+    font-size: 54px;
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.4s ease;
+    min-width: 500px;
+}
+.footer-section .footer .services a:hover{
+    color: #ffa500;
+}
+.footer-section .footer .services .orange{
+    color: #ffa500;
+}
+.footer-section .footer .services span{
+    font-size: 24px;
+    color: #aaa;
+    font-size: 600;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    padding: 4px;
+}
+.footer-section .footer .services span:hover{
+    color: #ffa500;
+}
+.footer-section .footer .services .white{
+    color: #fff;
+}
+.footer-section .footer .services h5{
+font-size: 28px;
+color: #fff;
+font-weight: 500;
+padding-bottom: 30px;
+}
+.footer-section .footer .services .input-container input{
+    border: none;
+    background: transparent;
+    outline: none;
+    border-bottom: 1px solid #fff;
+    width: 250px;
+    padding: 7px;
+    color: #fff;
+    font-size: 16px;
+}
+.footer-section .footer .services .input-container{
+    display: flex;
+    align-items: center;
+    padding-bottom: 70px;
+}
+.footer-section .footer .services .input-container button{
+    border: 1px solid #fff;
+    border-radius: 20px;
+    width: 140px;
+    border-radius: 20px;
+    height: 42px;
+    background: transparent;
+    color: #fff;
+    margin-left: 20px;
+    transition: 0.3s ease;
+}
+.footer-section .footer .services .input-container button:hover{
+    transform: scale(1.1);
+}
+
+.footer-section .footer .services  .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.footer-section .footer .services .last{
+    color: #fff;
+    padding-top: 50px;
+}
+.footer-section .footer .services .question h5{
+    color: #fff;
+    font-size: 15px;
+    padding-top: 35px;
+}
+
+@media(max-width:1200px){
+    .virtual-section .virtual-content .virtual img{
+        display: none;
+    }
+    .worth-barking-section h2{
+        font-size: 45px;
+    }
+    .loved-section .girls-section .girl .left-side .image img{
+        width: 400px;
+        object-fit: cover;
+        min-width: 100px;
+    }
+    .loved-section .girls-section .girl .left-side .image img{
+        width: 100%;
+    }
+}
+
+@media(max-width:991px){
+    .home-section{
+        display: flex;
+        flex-direction: column;
+    }
+    .home-section .home .left-side h2{
+        font-size: 30px;
+        padding-top: 40px;
+    }
+    .home-section .home .left-side .buttons {
+        margin-bottom: 40px;
+    }
+    .home-section .home .right-side{
+        width: 420px;
+        height: auto;
+    }
+    .home-section .home .right-side img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .home-section .home .left-side{
+        width: 100%;
+    }
+    .home-section .home .right-side{
+        width: 100%;
+    }
+    .discover-section{
+        padding-left: 20px;
+    }
+    .discover-section .discover .left-side h2{
+        font-size: 30px;
+    }
+    .discover-section .discover .left-side img{
+        width: 300px;
+    }
+    .discover-section .discover .left-side p{
+        font-size: 17px;
+    }
+    .discover-section .discover .right-side{
+        padding-top: 40px;
+    }
+    .shop-section .shops h2{
+        font-size: 35px;
+    }
+    .shop-section .shop{
+       padding-left:0 ;
+    }
+    .virtual-section{
+        padding-left: 20px;
+    }
+    .virtual-section .virtual-content .virtual{
+        width: 100%;
+    }
+    .virtual-section .virtual-content .virtual{
+        display: flex;
+        flex-direction: column;
+        min-width: 400px;
+    }
+    
+    .virtual-section .virtual-content .virtual .center h2{
+        font-size: 35px;
+    }
+    .virtual-section .virtual-content .virtual .center p{
+        font-size: 17px;
+    }
+    .virtual-section .virtual-content .virtual .center button{
+        margin-top: 30px;
+        margin-right:120px;
+    }
+    .bundles-section .bundles h2{
+font-size: 42px;
+    }
+    .fin-way-section .fresh-section .fresh  h5{
+        font-size: 34px;
+    }
+    .loved-section h2{
+        font-size: 42px;
+    }
+    .loved-section .girls-section .girl .left-side .image{
+        width: 350px;
+    }
+    .worth-barking-section h2{
+        font-size: 30px;
+        min-width: 500px;
+    }
+    .worth-barking-section .worth{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+        margin-top: 30px;
+    }
+    .worth-barking-section .worth .right-side{
+        width: 100%;
+        padding-left: 40px;
+    }
+   .worth-barking-section .worth .left-side{
+    width: 100%;
+    height: 470px;
+   }
+    .worth-barking-section .worth .right-side p{
+        min-width: 70px;
+    }
+
+}
+@media(max-width:768px){
+    .header .logo{
+        padding-top: 0;
+    }
+    
+    .home-section .home .left-side {
+        width: 100%;
+    }
+.home-section .home .right-side{
+    width: 100%;
+}
+.shop-section .shops h2{
+    font-size: 22px;
+}
+.virtual-section{
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    height: 580px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 80px;
+    padding-right: 80px;
+   
+}
+.virtual-section .virtual-content .virtual{
+    width: 100%;
+    height: 400px;
+}
+.virtual-section .virtual-content .virtual .center button{
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+.fin-way-section h2{
+    font-size: 40px;
+}
+.fin-way-section .fresh-section .fresh {
+    text-align: center;
+}
+.fin-way-section .fresh-section .fresh p{
+    font-size: 18px;
+}
+.loved-section{
+    text-align: center;
+}
+.loved-section .girls-section .girl .left-side .image{
+    display: flex;
+    margin: 0 auto;
+}
+.loved-section .girls-section .girl .right-side{
+    padding-top: 45px;
+}
+.footer-section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-left: 20px;
+}
+.footer-section .footer .services{
+    margin: 20px;
+}
+.footer-section .footer .services .input-container{
+    margin-left: 60px;
+}
+.footer-section .footer .services a{
+    font-size: 28px;
+}
+.footer-section .footer .services span{
+    font-size: 19px;
+}
+
+}
+
+@media(max-width:500px){
+    .header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0;
+    }
+    .header .menu .button  {
+        width: 110px;
+    }
+    .virtual-section .virtual-content .virtual .center h2{
+        font-size: 18px;
+    }
+    .virtual-section .virtual-content .virtual{
+       max-width: 400px;
+    }
+    .virtual-section .virtual-content .virtual .center{
+       width: 100%;
+        padding-right: 120px;
+    }
+    .worth-barking-section h2{
+        min-width: 140px;
+    }
+    .footer-section{
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+    }
+    .footer-section .footer .services .input-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-section .footer .services .input-container button{
+        margin-top: 45px;
+        margin-right: 45px;
+    }
+    .footer-section .footer .services .logo img{
+        width: 400px;
+    }
+}
+
+@media(max-width:395px){
+    .header{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .shop-section .shop{
+        padding-left: 30px;
+    }
+}

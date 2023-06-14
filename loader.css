@@ -1,0 +1,39 @@
+.bar{
+    width: 10px;
+    height: 40px;
+    background-color: #ffa500;
+    margin: 0 5px;
+}
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: bar 1s infinite;
+}
+@keyframes bar{
+    0%{
+        transform: scaleY(0.2);
+    }
+    50%{
+        transform: scaleY(1);
+    }
+    100%{
+        transform: scaleY(0.2);
+    }
+}
+.hereket1{
+    animation-delay: 0.1s;
+}
+.hereket2{
+    animation-delay: 0.2s;
+}
+.hereket3{
+    animation-delay: 0.3s;
+}
+.hereket4{
+    animation-delay: 0.4s;
+}
+.hereket5{
+    animation-delay: 0.5s;
+}
